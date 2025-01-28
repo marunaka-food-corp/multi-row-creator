@@ -1,6 +1,15 @@
+import React, { useState, useCallback } from 'react';
 import './App.css';
 
 function App() {
+  const onDrop = useCallback((e) => {
+    e.preventDefault();
+  }, []);
+
+  const onDragOver = useCallback((e) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <div>
       <h1 style={{ marginLeft: '20px', marginBottom: '0px' }}>multi-row-creator</h1>
@@ -22,6 +31,8 @@ function App() {
           width: '80%',
           maxWidth: '600px'
         }}
+        onDrop={onDrop}
+        onDragOver={onDragOver}
       >
         <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
       </div>
