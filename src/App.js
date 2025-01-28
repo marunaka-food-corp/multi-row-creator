@@ -67,7 +67,7 @@ function App() {
           <li>aaaa</li>
         </ul>
 
-        <label htmlFor="target">対象シート</label>
+        <label htmlFor="target">対象シート：</label>
         <select
           id="target"
           value={selectedSheetName}
