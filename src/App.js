@@ -29,7 +29,7 @@ function App() {
       };
       reader.readAsArrayBuffer(file);
     }
-  }, [selectedSheetName]);
+  }, []);
 
   const onDragOver = useCallback((e) => {
     e.preventDefault();
