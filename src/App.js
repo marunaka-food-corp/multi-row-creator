@@ -10,6 +10,8 @@ function App() {
     e.preventDefault();
   }, []);
 
+  const download = () => {};
+
   return (
     <div>
       <h1 style={{ marginLeft: '20px', marginBottom: '0px' }}>multi-row-creator</h1>
