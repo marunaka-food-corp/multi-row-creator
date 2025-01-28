@@ -67,22 +67,24 @@ function App() {
           <li>aaaa</li>
         </ul>
 
-        <label htmlFor="target">対象シート：</label>
-        <select
-          id="target"
-          value={selectedSheetName}
-          onChange={(e) => setSelectedSheetName(e.target.value)}
-          style={{
-            width: '150px',
-            height: '25px',
-            fontSize: '16px',
-            marginLeft: '5px'
-          }}
-        >
-          <option value="朝食シール確定">朝食シール確定</option>
-          <option value="昼食シール確定">昼食シール確定</option>
-          <option value="夕食シール確定">夕食シール確定</option>
-        </select>
+        <div>
+          <label htmlFor="target">対象シート：</label>
+          <select
+            id="target"
+            value={selectedSheetName}
+            onChange={(e) => setSelectedSheetName(e.target.value)}
+            style={{
+              width: '150px',
+              height: '25px',
+              fontSize: '16px',
+              marginLeft: '5px'
+            }}
+          >
+            <option value="朝食シール確定">朝食シール確定</option>
+            <option value="昼食シール確定">昼食シール確定</option>
+            <option value="夕食シール確定">夕食シール確定</option>
+          </select>
+        </div>
 
       </div>
       <div
