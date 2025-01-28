@@ -62,7 +62,7 @@ function App() {
       >
         <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
       </div>
-      <h3 style={{ marginLeft: '20px' }}>朝食シール確定</h3>
+      <h3>朝食シール確定</h3>
     </div>
   );
 }
