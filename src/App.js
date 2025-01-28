@@ -66,7 +66,7 @@ function App() {
         <div style={{ overflowX: 'auto', margin: '20px' }}>
           <h3 style={{ marginTop: '0px', marginBottom: '10px' }}>朝食シール確定</h3>
           <div style={{ marginBottom: '30px' }}>
-            <button onClick={download}>download</button>
+            <button onClick={download}>ダウンロード</button>
           </div>
           <table border="1" cellPadding="5" style={{ borderCollapse: 'collapse', width: '100%' }}>
             <tbody>
