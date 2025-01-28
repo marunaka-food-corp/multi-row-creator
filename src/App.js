@@ -72,6 +72,12 @@ function App() {
           id="target"
           value={selectedSheetName}
           onChange={(e) => setSelectedSheetName(e.target.value)}
+          style={{
+            width: '150px',
+            height: '25px',
+            fontSize: '16px',
+            marginLeft: '5px'
+          }}
         >
           <option value="朝食シール確定">朝食シール確定</option>
           <option value="昼食シール確定">昼食シール確定</option>
