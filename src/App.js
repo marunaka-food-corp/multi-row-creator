@@ -66,7 +66,6 @@ function App() {
           <li>aaaa</li>
           <li>aaaa</li>
         </ul>
-
         {!data && (
           <div>
             <label htmlFor="target">対象シート：</label>
@@ -87,7 +86,6 @@ function App() {
             </select>
           </div>
         )}
-
       </div>
       <div
         style={{
