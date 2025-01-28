@@ -29,7 +29,7 @@ function App() {
       };
       reader.readAsArrayBuffer(file);
     }
-  }, []);
+  }, [selectedSheetName]);
 
   const onDragOver = useCallback((e) => {
     e.preventDefault();
@@ -52,8 +52,8 @@ function App() {
 
     const worksheet = XLSX.utils.aoa_to_sheet(mrData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '朝食シール確定');
-    XLSX.writeFile(workbook, '朝食シール確定.xlsx');
+    XLSX.utils.book_append_sheet(workbook, worksheet, selectedSheetName);
+    XLSX.writeFile(workbook, `${selectedSheetName}.xlsx`);
   };
 
   return (
@@ -84,7 +84,7 @@ function App() {
       </div>
       {data && (
         <div style={{ overflowX: 'auto', margin: '20px' }}>
-          <h3 style={{ marginTop: '0px', marginBottom: '10px' }}>朝食シール確定</h3>
+          <h3 style={{ marginTop: '0px', marginBottom: '10px' }}>{selectedSheetName}</h3>
           <div style={{ marginBottom: '30px' }}>
             <button onClick={download}>ダウンロード</button>
           </div>
