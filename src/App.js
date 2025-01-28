@@ -62,7 +62,15 @@ function App() {
       >
         <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
       </div>
-      <h3>朝食シール確定</h3>
+      {data && (
+        <div style={{ overflowX: 'auto', margin: '20px' }}>
+          <h3>朝食シール確定</h3>
+          <table border="1" cellPadding="5" style={{ borderCollapse: 'collapse', width: '100%' }}>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
