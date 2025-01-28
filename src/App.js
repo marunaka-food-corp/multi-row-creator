@@ -34,7 +34,26 @@ function App() {
     e.preventDefault();
   }, []);
 
-  const download = () => {};
+  const download = () => {
+    const mrData = [];
+    mrData.push(data[0]);
+
+    for (let i = 1; i < data.length; i++) {
+      const row = data[i];
+      const lastCell = row[row.length - 1];
+      const count = typeof lastCell === 'number'
+        ? lastCell
+        : parseInt(lastCell, 10);
+      for (let j = 0; j < count; j++) {
+        mrData.push(row);
+      }
+    }
+
+    const worksheet = XLSX.utils.aoa_to_sheet(mrData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, '朝食シール確定');
+    XLSX.writeFile(workbook, '朝食シール確定.xlsx');
+  };
 
   return (
     <div>
