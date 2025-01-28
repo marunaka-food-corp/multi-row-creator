@@ -1,9 +1,18 @@
 import React, { useState, useCallback } from 'react';
+import * as XLSX from 'xlsx';
 import './App.css';
 
 function App() {
+  const [data, setData] = useState(null);
+
   const onDrop = useCallback((e) => {
     e.preventDefault();
+
+    const files = e.dataTransfer.files;
+    if (files && files.length === 1) {
+      const file = files[0];
+      if (!file.name.endsWith('.xlsx')) return;
+    }
   }, []);
 
   const onDragOver = useCallback((e) => {
