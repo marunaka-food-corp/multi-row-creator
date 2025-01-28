@@ -9,7 +9,10 @@ function App() {
           border: '2px dashed #ccc',
           borderRadius: '4px',
           padding: '20px',
-          textAlign: 'center'
+          textAlign: 'center',
+          margin: '20px auto',
+          width: '80%',
+          maxWidth: '600px'
         }}
       >
         <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
