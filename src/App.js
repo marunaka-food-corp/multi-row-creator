@@ -3,7 +3,15 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1 style={{ marginLeft: '20px' }}>multi-row-creator</h1>
+      <h1 style={{ marginLeft: '20px', marginBottom: '0px' }}>multi-row-creator</h1>
+      <div style={{ marginLeft: '20px' }}>
+        <ul>
+          <li>aaaa</li>
+          <li>aaaa</li>
+          <li>aaaa</li>
+          <li>aaaa</li>
+        </ul>
+      </div>
       <div
         style={{
           border: '2px dashed #ccc',
