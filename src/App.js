@@ -3,6 +3,8 @@ import * as XLSX from 'xlsx';
 import './App.css';
 
 function App() {
+  const defaultSheetName = '朝食シール確定';
+  const [selectedSheetName, setSelectedSheetName] = useState('朝食シール確定');
   const [data, setData] = useState(null);
 
   const onDrop = useCallback((e) => {
