@@ -95,7 +95,7 @@ function App() {
               onDrop={onDrop}
               onDragOver={onDragOver}
             >
-              <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
+              <p>xlsxをここにドラッグ&ドロップして下さい。</p>
             </div>
           </div>
         )}
