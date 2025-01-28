@@ -64,10 +64,9 @@ function App() {
           <li>ドロップダウンから、対象シートを選択する</li>
           <li>対象シートの含まれたxlsxを、ドラッグ&ドロップする</li>
           <li>ダウンロードボタンをクリックすると、最終列のセル数で行複製されたxlsxがダウンロードされる</li>
-          <li>aaaa</li>
         </ul>
         {!data && (
-          <div>
+          <div style={{ marginLeft: '20px' }}>
             <label htmlFor="target">対象シート：</label>
             <select
               id="target"
@@ -94,7 +93,7 @@ function App() {
           padding: '20px',
           textAlign: 'center',
           margin: '20px auto',
-          width: '80%',
+          width: '90%',
           // maxWidth: '800px'
         }}
         onDrop={onDrop}
