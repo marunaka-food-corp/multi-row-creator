@@ -2,6 +2,7 @@
   "name": "multi-row-creator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://marunaka-food-corp.github.io/multi-row-creator/",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
