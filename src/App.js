@@ -12,6 +12,11 @@ function App() {
     if (files && files.length === 1) {
       const file = files[0];
       if (!file.name.endsWith('.xlsx')) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+      };
+      reader.readAsArrayBuffer(file);
     }
   }, []);
 
