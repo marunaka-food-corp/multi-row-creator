@@ -61,7 +61,7 @@ function App() {
       <h1 style={{ marginLeft: '20px', marginBottom: '0px' }}>multi-row-creator</h1>
       <div style={{ marginLeft: '20px' }}>
         <ul>
-          <li>ドロップダウンから、対象シートを選択する</li>
+          <li>ドロップダウンから対象シートを選択する</li>
           <li>対象シートの含まれたxlsxを、ドラッグ&ドロップする</li>
           <li>ダウンロードボタンをクリックすると、最終列のセル数で行複製されたxlsxがダウンロードされる</li>
         </ul>
