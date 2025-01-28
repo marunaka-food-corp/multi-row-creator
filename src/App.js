@@ -97,7 +97,7 @@ function App() {
           textAlign: 'center',
           margin: '20px auto',
           width: '80%',
-          maxWidth: '800px'
+          // maxWidth: '800px'
         }}
         onDrop={onDrop}
         onDragOver={onDragOver}
