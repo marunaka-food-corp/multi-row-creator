@@ -15,6 +15,15 @@ function App() {
 
       const reader = new FileReader();
       reader.onload = (event) => {
+        const arrayBuffer = event.target.result;
+        const workbook = XLSX.read(arrayBuffer, { type: 'array' });
+        const sheetName = '朝食シール確定';
+        const worksheet = workbook.Sheets[sheetName];
+        if (!worksheet) {
+          alert('Not found');
+          return;
+        }
+
       };
       reader.readAsArrayBuffer(file);
     }
