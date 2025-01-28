@@ -83,26 +83,23 @@ function App() {
               <option value="昼食シール確定">昼食シール確定</option>
               <option value="夕食シール確定">夕食シール確定</option>
             </select>
+            <div
+              style={{
+                border: '2px dashed #ccc',
+                borderRadius: '4px',
+                padding: '20px',
+                textAlign: 'center',
+                marginTop: '20px',
+                width: '600px'
+              }}
+              onDrop={onDrop}
+              onDragOver={onDragOver}
+            >
+              <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
+            </div>
           </div>
         )}
       </div>
-      {!data && (
-        <div
-          style={{
-            border: '2px dashed #ccc',
-            borderRadius: '4px',
-            padding: '20px',
-            textAlign: 'center',
-            margin: '20px auto',
-            width: '90%',
-            // maxWidth: '800px'
-          }}
-          onDrop={onDrop}
-          onDragOver={onDragOver}
-        >
-          <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
-        </div>
-      )}
       {data && (
         <div style={{ overflowX: 'auto', margin: '20px' }}>
           <h3 style={{ marginTop: '0px', marginBottom: '10px' }}>{selectedSheetName}</h3>
