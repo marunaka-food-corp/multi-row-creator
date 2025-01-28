@@ -86,21 +86,23 @@ function App() {
           </div>
         )}
       </div>
-      <div
-        style={{
-          border: '2px dashed #ccc',
-          borderRadius: '4px',
-          padding: '20px',
-          textAlign: 'center',
-          margin: '20px auto',
-          width: '90%',
-          // maxWidth: '800px'
-        }}
-        onDrop={onDrop}
-        onDragOver={onDragOver}
-      >
-        <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
-      </div>
+      {!data && (
+        <div
+          style={{
+            border: '2px dashed #ccc',
+            borderRadius: '4px',
+            padding: '20px',
+            textAlign: 'center',
+            margin: '20px auto',
+            width: '90%',
+            // maxWidth: '800px'
+          }}
+          onDrop={onDrop}
+          onDragOver={onDragOver}
+        >
+          <p>xlsxファイルをここにドラッグ&ドロップして下さい。</p>
+        </div>
+      )}
       {data && (
         <div style={{ overflowX: 'auto', margin: '20px' }}>
           <h3 style={{ marginTop: '0px', marginBottom: '10px' }}>{selectedSheetName}</h3>
