@@ -21,7 +21,7 @@ function App() {
         const workbook = XLSX.read(arrayBuffer, { type: 'array' });
         const worksheet = workbook.Sheets[selectedSheetName];
         if (!worksheet) {
-          alert(`${selectedSheetName} シートが見つかりません。`);
+          alert(`「${selectedSheetName}」シートが見つかりません。`);
           return;
         }
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
