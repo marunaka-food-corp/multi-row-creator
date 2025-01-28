@@ -67,6 +67,13 @@ function App() {
           <h3>朝食シール確定</h3>
           <table border="1" cellPadding="5" style={{ borderCollapse: 'collapse', width: '100%' }}>
             <tbody>
+              {data.map((row, rowIndex) => (
+                <tr key={`row-${rowIndex}`}>
+                  {row.map((cell, cellIndex) => (
+                    <td key={`cell-${rowIndex}-${cellIndex}`}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
