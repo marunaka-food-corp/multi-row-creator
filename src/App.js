@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const defaultSheetName = '朝食シール確定';
-  const [selectedSheetName, setSelectedSheetName] = useState('朝食シール確定');
+  const [selectedSheetName, setSelectedSheetName] = useState(defaultSheetName);
   const [data, setData] = useState(null);
 
   const onDrop = useCallback((e) => {
@@ -19,10 +19,9 @@ function App() {
       reader.onload = (event) => {
         const arrayBuffer = event.target.result;
         const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-        const sheetName = '朝食シール確定';
-        const worksheet = workbook.Sheets[sheetName];
+        const worksheet = workbook.Sheets[selectedSheetName];
         if (!worksheet) {
-          alert('Not found');
+          alert(`${selectedSheetName} シートが見つかりません。`);
           return;
         }
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
